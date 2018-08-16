@@ -1,0 +1,394 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Date
+11/13/16
+\end_layout
+
+\begin_layout Title
+Jazz
+\end_layout
+
+\begin_layout Author
+Abdullah Rohani
+\end_layout
+
+\begin_layout Abstract
+Det här ett projekt som är skriven i C#.
+ Projektet är ett enkelt dataspel som heter Jazz.
+ Jazz är ett windows form spel som utvecklades med XNA.
+ Spelet spelas av en spelare.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+syfte
+\end_layout
+
+\begin_layout Standard
+Syftet med spelet är att en spelare som är en krig flygplan som skjutar
+ sina fiender.
+ När flygplanen skjutar sina fiender, om flygpalnens kulla träffar någon
+ av fiender så man poäng.
+ Om fienders kulla träffar flygplanen då minskas livet och till slut dör
+ man.
+ 
+\end_layout
+
+\begin_layout Section
+Methoder i klassen Game1
+\end_layout
+
+\begin_layout Standard
+Startklassen Game för ett XNA-spel, ärver egenskaperna från XNA-klassen
+ Game, i min exempel heter klassen Game1.
+ I Game1 basklassens initierare anropas för spelkomponenterna som finns
+ i en komponentbehållare.
+\end_layout
+
+\begin_layout Itemize
+LoadContent
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Här läses resuser till player, bakgrundsbilder, HUD(fonter) och ljud.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Update
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Här finns spelets kontrol som kontroleras med hjälp av tangentbord.
+ Players, bombs, och stridvägn kollission updateras här, dvs att hur spelet
+ skall fortsättas.
+ Plyers och stridvägns kulor kontroleras här, dvs hur många gånger kan Player
+ sjuta under en bestämd tids interval.
+\end_layout
+
+\begin_layout Itemize
+Här updaters kollissionens enimation och ljud, när en kula träffar bombar
+ eller och stridvägner så spelas en ljud och kollisionsbild.
+ Enimations bild till kollission är en 2demotionell array bild.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Draw
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+här sker rendering, dvs att här skapas bilder till bomb, player, jets och
+ expolission.
+ Baseklassens ritmetod anropas här.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+LoadJets
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Här skapas stridvägner som dyker up slumpmassig i skärman och andra funktionelli
+tet som stridvägner har.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Loadbombs
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Här skapas bombar som dyker up slumpmassig i skärman och andra funktionellitet
+ som bombar har.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ManageExplosions
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+här skapas expolission
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Spelkomponenter
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/arnbild.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+resultat
+\end_layout
+
+\begin_layout Standard
+Spelet fungerar som den skulle göra.
+ Jag han att göra mer än vad ideen var, dvs att ideen utvecklades lite mer
+ än den ursprungliga.
+ Nu finns fortfarande en spelare men det finns bombar som hindrar spelaren(flygp
+lanen) att röra sig fritt.
+ Om spelaren koliderar med bombar så minskas spelarens liv.
+ Spelaren kan också skjuta bombar så de exploderar.
+\end_layout
+
+\begin_layout Section
+framtida utvecklingar
+\end_layout
+
+\begin_layout Standard
+Spelet kan utvecklas i framtiden.
+ Just nu spelet är en väldigt enkel spel som behöver utvecklas i framtiden.
+ Jag kommer att utveckla en meny till spelet, dvs att när spelaren dör då
+ spelet måste avslutas.
+ Det ska gå att spelaren kan välja olika player utseende(skin) och bakrunds
+ bild.
+ Spelet ska ha en meny som spelaren kan spara alla sina inställningar.
+\end_layout
+
+\begin_layout Section
+diskussion
+\end_layout
+
+\begin_layout Standard
+Det fanns inte tillräckligt tid att jobba mer med projektet.
+ Jag har jobbat ungefär 100 timmer på den här projektet.
+ Jag brukade jobba 4-8 timmer värje gång, på det sättet brukar det ta mindre
+ tid för att skriva mer koder.
+ Det var svårt i början men efter ett tag det brukade ta mycket mindre tid
+ att skriva koder.
+ Jag tror att jag har gjort de svåra delar nu, i framtiden det är lättare
+ att lägga till nya sakar i spelet!.
+\end_layout
+
+\begin_layout Section
+bilagor
+\end_layout
+
+\begin_layout Standard
+Spelare
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/jet.png
+	scale 20
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Spelarens kula
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/bullet.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fiender
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/tank4.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fienders kula
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/JetsBullet.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bomb
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/Bomb1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expolision
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/explosion17.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bakgrund
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/Road2233.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename jazzpix/3454534.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+källförteckning
+\end_layout
+
+\begin_layout Standard
+Jag brukade söka på den sak jag behövde för att lösa problemet.
+\end_layout
+
+\begin_layout Standard
+Jag har använd infromation genom att söka på google och youtube.
+ Men de flesta information som jag har hämtat är från 
+\end_layout
+
+\begin_layout Standard
+https://www.youtube.com/watch?v=YQiQOYXnrkw&list=PL667AC2BF84D85779
+\end_layout
+
+\begin_layout Standard
+och
+\end_layout
+
+\begin_layout Standard
+https://www.youtube.com/watch?v=exqk0lH7-xc&list=PLDC1A9D5C3F8ED318
+\end_layout
+
+\end_body
+\end_document
